@@ -9,13 +9,57 @@ const romanToInt = function (r_num) {
         'M': 1000,
     };
     const str = r_num.toString();
-    const result = 0;
+    let result = 0;
     for (let i = 0, len = str.length; i < len; i++) {
         const strItem = str.charAt(i);
-        if (i + 1 = str.length)
+        if (i + 1 == str.length) return result += RomanNumber[strItem];
         const strNextItem = str.charAt(i+1);
         if (strItem === 'I') {
-            if ()
-        } else if (strItem === 'X') {} else if (strItem === 'C') {}
+            switch (strNextItem) {
+                case 'V':
+                    result += 4;
+                    i++;
+                    break;
+                case 'X':
+                    result += 9;
+                    i++;
+                    break;
+                default:
+                    result += RomanNumber[strItem];
+                    break;
+            }
+        } else if (strItem === 'X') {
+            switch (strNextItem) {
+                case 'L':
+                    result += 40;
+                    i++;
+                    break;
+                case 'C':
+                    result += 90;
+                    i++;
+                    break;
+                default:
+                    result += RomanNumber[strItem];
+                    break;
+            }
+        } else if (strItem === 'C') {
+            switch (strNextItem) {
+                case 'D':
+                    result += 400;
+                    i++;
+                    break;
+                case 'M':
+                    result += 900;
+                    i++;
+                    break;
+                default:
+                    result += RomanNumber[strItem];
+                    break;
+            }
+        } else {
+            result += RomanNumber[strItem];
+        }
     }
+
+    return result;
 }
