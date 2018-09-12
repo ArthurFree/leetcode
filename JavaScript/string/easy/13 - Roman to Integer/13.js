@@ -1,3 +1,11 @@
+/**
+ * Time: 2018-9-12
+ */
+
+/**
+ * 罗马数字转数字
+ * @param {*} r_num
+ */
 const romanToInt = function (r_num) {
     const RomanNumber = {
         'I': 1,
