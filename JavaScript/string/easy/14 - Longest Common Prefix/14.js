@@ -47,3 +47,23 @@ var longestCommonPrefix = function (arr) {
     return currLongestPrefix;
 
 }
+
+
+/**
+ * 最长公共前缀 - 第二种解法
+ * 执行时间： 56ms
+ * @param {string[]} arr
+ */
+var longestCommonPrefix2 = function (arr) {
+    if (arr.length === 0) return '';
+    var prefix = arr[0];
+
+    for (var i = 1, len = arr.length; i < len; i++) {
+        while (arr[i].indexOf(prefix) !== 0) {
+            prefix = prefix.substring(0, prefix.length - 1);
+            if (prefix.length === 0) return '';
+        }
+    }
+
+    return prefix;
+}
