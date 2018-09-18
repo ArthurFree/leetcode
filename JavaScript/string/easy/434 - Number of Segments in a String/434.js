@@ -3,11 +3,11 @@
  */
 
 /**
- * 反转字符串
+ * 字符串中的单词数
  * 执行时间： ms
  * @param {string} s
- * @return {string}
+ * @return {number}
  */
-var reverseString = function(s) {
+var countSegments = function(s) {
 
 };
