@@ -3,8 +3,8 @@
  */
 
 /**
- * 重复叠加字符串匹配
- * 执行时间： 560ms
+ * 计数二进制字串
+ * 执行时间：ms
  * @param {string} s
  * @return {number}
  */
