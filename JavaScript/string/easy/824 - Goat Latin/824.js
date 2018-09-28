@@ -77,3 +77,20 @@ var toGoatLatin3 = function (S) {
     }
     return s2arr.join(' ');
 }
+
+/**
+ * 最常见的单词 - 第四种解法
+ * 执行时间：52ms
+ * @param {string} S
+ * @return {string}
+ */
+var toGoatLatin4 = function (S) {
+    return S.split(' ').map((val, index) => {
+        if (/^[aeiou]/i.test(val)) {
+            val = val + 'ma' + 'a'.repeat(index + 1);
+        } else {
+            val = val.substr(1) + val.substr(0, 1) + 'ma' + 'a'.repeat(index + 1);
+        }
+        return val;
+    }).join(' ');
+}
