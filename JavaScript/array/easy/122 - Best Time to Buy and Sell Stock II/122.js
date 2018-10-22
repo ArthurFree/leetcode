@@ -29,7 +29,7 @@ var maxProfit = function(prices) {
 
 /**
  * 买卖股票的最佳时机 II - 第二种解法
- * 执行时间： 408ms
+ * 执行时间： 56ms
  * @param {number[]} prices
  * @return {number}
  */
