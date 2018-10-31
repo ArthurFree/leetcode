@@ -106,24 +106,24 @@ var findUnsortedSubarray = function(nums) {
  * @param {number[]} nums
  * @return {number}
  */
-var findUnsortedSubarray = function(nums) {
-    if(!nums || !nums.length){
+var findUnsortedSubarray = function (nums) {
+    if (!nums || !nums.length) {
         return 0;
     }
-    let len=nums.length;
-    let i=0;
-    let j=-1;
-    let max=nums[0];
-    let min=nums[len-1];
-    for(let left=0,right=len-1;right>=0;left++,right--){
-        max=nums[left] > max ? nums[left] : max;
-        if(nums[left] != max){
-            j=left;
+    let len = nums.length;
+    let i = 0;
+    let j = -1;
+    let max = nums[0];
+    let min = nums[len - 1];
+    for (let left = 0, right = len - 1; right >= 0; left++ , right--) {
+        max = nums[left] > max ? nums[left] : max;
+        if (nums[left] != max) {
+            j = left;
         }
-        min=nums[right] < min ? nums[right] : min;
-        if(nums[right] != min){
-            i=right;
+        min = nums[right] < min ? nums[right] : min;
+        if (nums[right] != min) {
+            i = right;
         }
     }
-    return j-i+1;
+    return j - i + 1;
 };
